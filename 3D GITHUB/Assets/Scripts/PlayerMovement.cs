@@ -19,8 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * moveX + transform.forward * moveZ;
         Vector3 velocity = move * speed;
-        velocity.y = rb.velocity.y;
-        rb.velocity = velocity;
+        velocity.y = rb.linearVelocity.y;
+        rb.linearVelocity = velocity;
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
